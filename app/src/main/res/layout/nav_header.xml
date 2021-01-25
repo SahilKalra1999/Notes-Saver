@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+android:background="@drawable/nevheader"
+    android:layout_height="200dp">
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="NotesSaver"
+      android:textSize="50sp"
+      android:textStyle="bold"
+      android:layout_marginStart="10dp"
+      android:textColor="#ffffff"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Own Personalized NoteBook.. "
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:layout_marginStart="10dp"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/userDisplayName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sahil Kalra"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="35dp"
+        android:textColor="#420DA1"/>
+    <TextView
+        android:id="@+id/userDisplayEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sahilkalra749@gmail.com"
+        android:textColor="#230659"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:layout_marginStart="10dp"
+        />
+
+
+
+</LinearLayout>

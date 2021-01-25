@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "691516046739",
+    "project_id": "notessaver-53f50",
+    "storage_bucket": "notessaver-53f50.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:691516046739:android:b5271db3690cd87c3a7c66",
+        "android_client_info": {
+          "package_name": "com.sahilkalra.notessaver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "691516046739-ojr20lt37qgbm2uc235psvdfrdkp99r8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2K4C6zcbJtMX5rMSlkS5d9nlloRK6Cbg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "691516046739-ojr20lt37qgbm2uc235psvdfrdkp99r8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
