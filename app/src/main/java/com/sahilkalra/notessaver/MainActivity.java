@@ -207,7 +207,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private void shareApp() {
         Intent shareIntent=new Intent(Intent.ACTION_SEND);
         shareIntent.setType("text/plain");
-        String shareBody="Your body here";
+        String shareBody="Download this project from my GitHub Link: https://github.com/SahilKalra1999/Notes-Saver";
         String shareSub="Your subject here";
         shareIntent.putExtra(Intent.EXTRA_SUBJECT,shareSub);
         shareIntent.putExtra(Intent.EXTRA_TEXT,shareBody);
