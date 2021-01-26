@@ -15,6 +15,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
 import android.view.Gravity;
@@ -267,7 +268,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.settings) {
-            Toast.makeText(this, "Settings Menu is clicked", Toast.LENGTH_SHORT).show();
+           // Toast.makeText(this, "Settings Menu is clicked", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(Settings.ACTION_SETTINGS));
         }
         return super.onOptionsItemSelected(item);
     }
