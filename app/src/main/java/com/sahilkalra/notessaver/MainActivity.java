@@ -104,14 +104,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     public void onClick(View v) {
                         PopupMenu menu=new PopupMenu(v.getContext(),v);
                         menu.setGravity(Gravity.END);
-                        String docId=noteAdapter.getSnapshots().getSnapshot(i).getId();
+                        String docId2=noteAdapter.getSnapshots().getSnapshot(i).getId();
                         menu.getMenu().add("Edit").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
                             @Override
                             public boolean onMenuItemClick(MenuItem item) {
                                 Intent i=new Intent(v.getContext(), EditNote.class);
                                 i.putExtra("title",note.getTitle());
                                 i.putExtra("content",note.getContent());
-                                i.putExtra("noteId",docId);
+                                i.putExtra("noteId2",docId2);
                                 startActivity(i);
                                 return false;
                             }
@@ -123,6 +123,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                                 docref.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
                                     @Override
                                     public void onSuccess(Void aVoid) {
+                                        Toast.makeText(MainActivity.this, "Note Deleted", Toast.LENGTH_SHORT).show();
                                         //note deleted
                                     }
                                 }).addOnFailureListener(new OnFailureListener() {
@@ -191,6 +192,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     Toast.makeText(this, "You are Connected.", Toast.LENGTH_SHORT).show();
                 }
                 break;
+            case R.id.shareapp:
+                shareApp();
+                break;
             case R.id.logout:
                 checkUser();
                 break;
@@ -198,6 +202,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Toast.makeText(this, "Coming Soon", Toast.LENGTH_SHORT).show();
         }
         return false;
+    }
+
+    private void shareApp() {
+        Intent shareIntent=new Intent(Intent.ACTION_SEND);
+        shareIntent.setType("text/plain");
+        String shareBody="Your body here";
+        String shareSub="Your subject here";
+        shareIntent.putExtra(Intent.EXTRA_SUBJECT,shareSub);
+        shareIntent.putExtra(Intent.EXTRA_TEXT,shareBody);
+        startActivity(Intent.createChooser(shareIntent,"Share Using"));
     }
 
     private void checkUser() {
@@ -290,7 +304,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     protected void onStart() {
         super.onStart();
-        noteAdapter.startListening();
+        if (noteAdapter!=null) {
+            noteAdapter.startListening();
+        }
     }
 
     @Override

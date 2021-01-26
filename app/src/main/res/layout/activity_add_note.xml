@@ -24,8 +24,9 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@android:color/transparent"
                 android:ems="10"
-                android:hint="untitled"
+                android:hint="@string/untitled"
                 android:inputType="textPersonName"
+                android:textColor="#ffffff"
                 android:textStyle="bold" />
         </androidx.appcompat.widget.Toolbar>
 
